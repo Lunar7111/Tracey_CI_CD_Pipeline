@@ -1,0 +1,212 @@
+﻿
+@{
+    ViewBag.Title = "Favourites";
+}
+<h1 class="main-title" id="fav12345">Favourites</h1>
+
+<div class="container">
+    <div class="content">
+        <a href="https://mangaplus.shueisha.co.jp/titles/100037" target="_blank">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="~/img/csm.jpg" " " style=width:250px>
+            <div class="content-details fadeIn-bottom">
+                <h3 class="content-title">Chainsaw Man</h3>
+                <p class="content-text">
+                    Chainsaw Man is a Japanese manga series written and illustrated by Tatsuki Fujimoto.
+                    Its first arc was serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump from December 2018 to December 2020;
+                    its second arc began serialization in Shueisha's Shōnen Jump+ online magazine in July 2022.
+                </p>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="content">
+        <a href="https://smallvillecomics.co.za/product/batman-the-long-halloween-deluxe-edition-hc/" target="_blank">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="~/img/batman.jpg" " " style=width:250px>
+            <div class="content-details fadeIn-bottom">
+                <h3 class="content-title">Batman: The Long Halloween</h3>
+                <p class="content-text">
+                    Taking place during Batman's early days of crime fighting, The Long Halloween tells the story of a mysterious killer named Holiday, who murders people on holidays, one each month.
+                    Batman races against the calendar as he tries to discover who Holiday is before he claims his next victim each month,
+                    while attempting to stop the crime war between two of Gotham City's most powerful families, Maroni and Falcone.
+                </p>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="content">
+        <a href="https://ww5.manganelo.tv/manga/manga-av977656" target="_blank">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="~/img/blend-s.jpg" " " style=width:250px>
+            <div class="content-details fadeIn-bottom">
+                <h3 class="content-title">Blend-S</h3>
+                <p class="content-text">
+                    High school girl Maika Sakuranomiya has trouble finding a part-time job because of how scary she looks when smiling.
+                    However, she is scouted one day by an Italian man who is also the manager of Stile,
+                    a café where its waitresses are given unique traits such as tsundere and younger sister.
+                </p>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="content">
+        <a href="https://www.marvel.com/comics/characters/1011299/guardians_of_the_galaxy" target="_blank">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="~/img/gotg.jpg" style=width:250px> <img />
+            <div class="content-details fadeIn-bottom">
+                <h3 class="content-title">Gardians Of The Galaxy</h3>
+                <p class="content-text">
+                    Al Ewing brings his cosmic brand of storytelling to the Guardians of the Galaxy!
+                    Once, they were a team of misfits. Now they're a family, and they've earned their peace.
+                    But the universe is not a peaceful place - and it's only getting worse. Someone has to guard the galaxy.
+                </p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+<style>
+
+    *, *:before, *:after{
+      margin: 0;
+      padding: 0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing:border-box;
+      box-sizing: border-box;
+    }
+
+    #fav12345 {
+        font-size: 70px;
+        font-weight: 600;
+        font-family: 'Roboto', sans-serif;
+        color: #b393d3;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 0px #957dad, 1px 2px 0px #957dad, 1px 3px 0px #957dad, 1px 4px 0px #957dad, 1px 5px 0px #957dad, 1px 6px 0px #957dad, 1px 10px 5px rgba(16, 16, 16, 0.5), 1px 15px 10px rgba(16, 16, 16, 0.4), 1px 20px 30px rgba(16, 16, 16, 0.3), 1px 25px 50px rgba(16, 16, 16, 0.2);
+    }
+
+    body {
+        background: #f9f9f9;
+        font-size: 16px;
+        font-family: 'Raleway', sans-serif;
+        background: url("../img/ba.jpg");
+        height: 800px;
+        background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+    }
+
+    .main-title{
+      color: #2d2d2d;
+      text-align: center;
+      text-transform: capitalize;
+      padding: 0.7em 0;
+    }
+
+    .container{
+      float: inline-end;
+      padding: 1em 0;
+      width: 50%;
+    }
+   
+
+    .container .title{
+      color: #1a1a1a;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .content {
+      position: relative;
+      width: 90%;
+      max-width: 400px;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .content .content-overlay {
+      background: rgba(0,0,0,0.7);
+      position: absolute;
+      height: 99%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0;
+      -webkit-transition: all 0.4s ease-in-out 0s;
+      -moz-transition: all 0.4s ease-in-out 0s;
+      transition: all 0.4s ease-in-out 0s;
+    }
+
+    .content:hover .content-overlay{
+      opacity: 1;
+    }
+
+    .content-image{
+      width: 100%;
+    }
+
+    .content-details {
+      position: absolute;
+      text-align: center;
+      padding-left: 1em;
+      padding-right: 1em;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      opacity: 0;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      -moz-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+    }
+
+    .content:hover .content-details{
+      top: 50%;
+      left: 50%;
+      opacity: 1;
+    }
+
+    .content-details h3{
+      color: #fff;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.5em;
+      text-transform: uppercase;
+    }
+
+    .content-details p{
+      color: #fff;
+      font-size: 0.8em;
+    }
+
+    .fadeIn-bottom{
+      top: 80%;
+    }
+
+    .fadeIn-top{
+      top: 20%;
+    }
+
+    .fadeIn-left{
+      left: 20%;
+    }
+
+    .fadeIn-right{
+      left: 80%;
+    }
+</style>
+
+
+
+

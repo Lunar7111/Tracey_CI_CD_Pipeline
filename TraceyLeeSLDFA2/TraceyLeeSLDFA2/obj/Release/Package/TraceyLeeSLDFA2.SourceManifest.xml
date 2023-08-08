@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\tswar\OneDrive\Documents\CTU COLLEGE\Modules\SLD521\Formatives\Formative 2\Tracey-Lee Swartz 20230171 SLD521 Formative Assessment 2\code\TraceyLeeSLDFA2\TraceyLeeSLDFA2\obj\Release\Package\PackageTmp" />
+  <setAcl path="C:\Users\tswar\OneDrive\Documents\CTU COLLEGE\Modules\SLD521\Formatives\Formative 2\Tracey-Lee Swartz 20230171 SLD521 Formative Assessment 2\code\TraceyLeeSLDFA2\TraceyLeeSLDFA2\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\tswar\OneDrive\Documents\CTU COLLEGE\Modules\SLD521\Formatives\Formative 2\Tracey-Lee Swartz 20230171 SLD521 Formative Assessment 2\code\TraceyLeeSLDFA2\TraceyLeeSLDFA2\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>
