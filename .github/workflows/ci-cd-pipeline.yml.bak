@@ -20,7 +20,7 @@ jobs:
         run: nuget restore  # Make sure you have a NuGet.config file in the repository if you have private NuGet feeds.
 
       - name: Build
-        run: msbuild TraceyLeeSLDFA2 /p:Configuration=Release  # Adjust the build command based on your .NET Framework project structure.
+        run: msbuild ./TraceyLeeSLDFA2/TraceyLeeSLDFA2.sln /p:Configuration=Release  # Adjust the build command based on your .NET Framework project structure.
 
       - name: Test
         run: |

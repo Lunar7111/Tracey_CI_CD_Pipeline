@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build-test-deploy:
+  build:
     runs-on: windows-latest
 
     steps:
@@ -14,21 +14,47 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v1.0.2  # This will set up MSBuild on the Windows runner.
+        uses: microsoft/setup-msbuild@v1
+        with:
+          msbuild-version: 'latest'
 
-      - name: Restore NuGet packages
-        run: nuget restore  # Make sure you have a NuGet.config file in the repository if you have private NuGet feeds.
+      - name: Build application
+        run: msbuild ./TraceyLeeSLDFA2/TraceyLeeSLDFA2.sln /p:Configuration=Release
 
-      - name: Build
-        run: msbuild ./TraceyLeeSLDFA2/TraceyLeeSLDFA2.sln /p:Configuration=Release  # Adjust the build command based on your .NET Framework project structure.
+  test:
+    needs: build
+    runs-on: windows-latest
 
-      - name: Test
-        run: |
-          # Add commands to run your unit tests here (e.g., nunit-console, vstest.console, etc.).
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      - name: Deploy to staging environment
-        run: |
-          echo "Deploying to staging environment..."
-          # Add commands to deploy your web application to the staging environment.
-          # You might use tools like MSDeploy or any other deployment mechanism suitable for your environment.
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1
+        with:
+          msbuild-version: 'latest'
 
+      - name: Build application
+        run: msbuild ./TraceyLeeSLDFA2/TraceyLeeSLDFA2.sln /p:Configuration=Release
+
+      - name: Run tests (replace with actual test commands)
+        run: echo "Running tests..."
+
+  deploy:
+    needs: test
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1
+        with:
+          msbuild-version: 'latest'
+
+      - name: Build application
+        run: msbuild ./TraceyLeeSLDFA2/TraceyLeeSLDFA2.sln /p:Configuration=Release
+
+      - name: Deploy to staging (replace with actual deployment steps)
+        run: echo "Deploying to staging..."
