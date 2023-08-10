@@ -59,7 +59,7 @@ jobs:
       - name: Deploy to staging (replace with actual deployment steps)
         run: echo "Deploying to staging..."
 
-notify:
+  notify:
     name: Notify team on success
     runs-on: windows-latest
     needs: [build, test, deploy]
